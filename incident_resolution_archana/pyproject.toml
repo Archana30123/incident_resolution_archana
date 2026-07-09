@@ -1,0 +1,24 @@
+[project]
+name = "incident_resolution_archana"
+version = "0.1.0"
+description = "incident_resolution_archana using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]==1.14.7"
+]
+
+[project.scripts]
+incident_resolution_archana = "incident_resolution_archana.main:run"
+run_crew = "incident_resolution_archana.main:run"
+train = "incident_resolution_archana.main:train"
+replay = "incident_resolution_archana.main:replay"
+test = "incident_resolution_archana.main:test"
+run_with_trigger = "incident_resolution_archana.main:run_with_trigger"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
